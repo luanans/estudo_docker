@@ -50,3 +50,6 @@ Para criar a imagem Docker do projeto:
 - `Dockerfile`: Define a imagem Docker para o aplicativo Python.
 - `docker-compose.yml`: Configura os serviços necessários para o projeto.
 - `requirements.txt`: Lista as dependências python do projeto.
+
+# Link da Imagem no DockerHub
+[Link](https://hub.docker.com/repository/docker/luanans/python-modelo/general)
