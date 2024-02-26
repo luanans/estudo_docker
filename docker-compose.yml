@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  mongodb:
+    image: mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: luana
+      MONGO_INITDB_ROOT_PASSWORD: luana
+    ports:
+      - "27018:27017"
+    volumes:
+      - mongodb-data:/data/db
+
+  modelo:
+    build: .
+    depends_on:
+      - mongodb
+    environment:
+      MONGODB_HOSTNAME: mongodb
+      MONGODB_USERNAME: luana
+      MONGODB_PASSWORD: luana
+
+volumes:
+  mongodb-data:
